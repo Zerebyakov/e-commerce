@@ -4,7 +4,7 @@ node_modules/
 # Logs
 logs/
 *.log
-
+request.rest
 # dotenv environment files
 .env
 request.rest
