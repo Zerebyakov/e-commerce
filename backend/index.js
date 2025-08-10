@@ -9,6 +9,13 @@ import session from 'express-session'
 import SequelizeStore from 'connect-session-sequelize'
 import db from './config/Database.js'
 
+
+import CartRoute from './routes/CartRoute.js'
+import TransactionRoute from './routes/TransactionRoute.js'
+import TransactionItemsRoute from './routes/TransactionItemsRoutes.js'
+
+
+
 dotenv.config();
 
 
@@ -38,7 +45,9 @@ app.use(UserRoute)
 app.use(ProductRoute)
 app.use(CategoryRoute)
 app.use(AuthRoute)
-
+app.use("/cart", CartRoute)
+app.use("/transactions", TransactionRoute)
+app.use("/transaction-items",TransactionItemsRoute)
 
 app.listen(process.env.APP_PORT, ()=>{
     console.log('Server up and running!!')

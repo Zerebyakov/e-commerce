@@ -26,7 +26,7 @@ export const getProducts = async (req,res) => {
             include:[
                 {
                     model: Category,
-                    attributes:['id','name','description']
+                    attributes:['id','name']
                 }
             ]
         });
