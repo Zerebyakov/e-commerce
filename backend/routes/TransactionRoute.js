@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.get("/:user_id", getTransactionsByUser);
-router.post("/", createTransactionFromCart);
+router.post("/transactions", createTransactionFromCart);
 router.patch("/:id", updateTransactionStatus);
 
 export default router;

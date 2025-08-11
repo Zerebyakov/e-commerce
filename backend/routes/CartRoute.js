@@ -6,7 +6,7 @@ import { addToCart, getCartByUser, removeFromCart, updateCartItem } from '../con
 const router = express.Router();
 
 router.get("/:user_id", getCartByUser);
-router.post("/", addToCart);
+router.post("/cart", addToCart);
 router.patch("/:id", updateCartItem);
 router.delete("/:id", removeFromCart);
 

@@ -45,8 +45,8 @@ app.use(UserRoute)
 app.use(ProductRoute)
 app.use(CategoryRoute)
 app.use(AuthRoute)
-app.use("/cart", CartRoute)
-app.use("/transactions", TransactionRoute)
+app.use( CartRoute)
+app.use(TransactionRoute)
 app.use("/transaction-items",TransactionItemsRoute)
 
 app.listen(process.env.APP_PORT, ()=>{
