@@ -1,11 +1,16 @@
-import express from 'express'
-import { createTransactionFromCart, getTransactionsByUser, updateTransactionStatus } from '../controllers/TransactionController.js';
+import express from "express";
+import {
+  getTransactionsByUser,
+  createTransactionFromCart,
+  updateTransactionStatus,
+  getTransactionById
+} from "../controllers/TransactionController.js";
 
 const router = express.Router();
 
-
-router.get("/:user_id", getTransactionsByUser);
+router.get("/transactions/:user_id", getTransactionsByUser);
+router.get("/transactions/detail/:id", getTransactionById);
 router.post("/transactions", createTransactionFromCart);
-router.patch("/:id", updateTransactionStatus);
+router.put("/transactions/:id", updateTransactionStatus);
 
 export default router;
